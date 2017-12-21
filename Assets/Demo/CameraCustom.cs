@@ -55,7 +55,7 @@ public class CameraCustom : MonoBehaviour {
 
 
 	void Update () {
-		
+
 		// Camera mode
 		if (Input.GetKeyDown ("1")) {
 			cameraMode = CameraMode.ONE;
@@ -67,22 +67,22 @@ public class CameraCustom : MonoBehaviour {
 			cameraMode = CameraMode.FOUR;
 		} else if (Input.GetKeyDown ("5")) {
 			cameraMode = CameraMode.FIVE;
-		} 
+		}
 
 		// Bloom mode
 		else if (Input.GetKeyDown (KeyCode.B)) {
 			bloom.enabled = !bloom.enabled;
-		} 
+		}
 
 		// Wall mode
 		else if (Input.GetKeyDown (KeyCode.W)) {
 			bg.SetActive (!bg.activeSelf);
-		} 
+		}
 
 		// Light mode
 		else if (Input.GetKeyDown (KeyCode.L)) {
 			int i = (int)lightMode;
-			i++; 
+			i++;
 			if (i >= System.Enum.GetValues (typeof(LightMode)).Length) {
 				i = 0;
 			}
